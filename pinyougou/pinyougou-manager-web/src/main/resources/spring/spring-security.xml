@@ -19,8 +19,10 @@ http://www.springframework.org/schema/security/spring-security.xsd">
         <!--该角色权限可以访问的资源-->
         <intercept-url pattern="/**" access="ROLE_USER"/>
         <!--开启登录功能,自动生成表单登录页面-->
-        <form-login login-page="/login.html" default-target-url="/admin/index.html"
-                    authentication-failure-url="/login.html" always-use-default-target="true" />
+        <form-login login-page="/login.html"
+                    default-target-url="/admin/index.html"
+                    authentication-failure-url="/login.html"
+                    always-use-default-target="true" />
         <!--关闭csrf-->
         <csrf disabled="true" />
         <!--frame可以使用-->

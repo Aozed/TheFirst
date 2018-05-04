@@ -45,5 +45,18 @@ app.controller('baseController' ,function($scope){
 				
 		return value;
 	}
+
+	//设置集合中数据的添加标准
+	$scope.searchObjectByKey = function (list,key,keyValue) {
+		//遍历查询集合中,是否有对应的key
+        for (var i=0;i<list.length;i++) {
+        	//如果有,则返回该条记录
+			if(list[i][key]==keyValue){
+				return list[i];
+			}
+        }
+        //如果没有,则返回空
+        return null;
+    };
 	
 });	
